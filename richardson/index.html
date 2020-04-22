@@ -419,6 +419,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tugas5/" title="Eurel" class="md-nav__link">
+      Eurel
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -520,8 +532,7 @@
 <span class="k">def</span> <span class="nf">D</span><span class="p">(</span><span class="n">Func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">h</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">Richardson_dif</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">):</span> 
-    <span class="sd">&#39;&#39;&#39;Richardson extrapolation method for numerical calculation of first derivative &#39;&#39;&#39;</span>
+<span class="k">def</span> <span class="nf">Richardson_dif</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
     <span class="n">k</span><span class="o">=</span><span class="mi">9</span> 
     <span class="n">L</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">I</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
@@ -531,25 +542,16 @@
             <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="p">((</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; DIFERENSIASI NUMERIK DARI &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=======================================================================&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f = -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 dengan x = 0.5&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=======================================================================&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=======================================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f(x) = -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 dengan x = 0.5&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Diferensiasi Numerik= &#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah = </span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
 </code></pre></div>
 
 
 <h3 id="hasil-running"><strong>Hasil Running</strong><a class="headerlink" href="#hasil-running" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">DIFERENSIASI</span> <span class="n">NUMERIK</span> <span class="n">DARI</span> <span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
-<span class="o">=======================================================================</span>
-<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="n">dengan</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="o">=======================================================================</span>
-<span class="o">-</span><span class="mf">0.91250000000000530687</span>
-<span class="o">=======================================================================</span>
+<div class="codehilite"><pre><span></span><code><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="n">dengan</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">Hasil</span> <span class="n">Diferensiasi</span> <span class="n">Numerik</span><span class="o">=</span> <span class="o">-</span><span class="mf">0.91250000000000530687</span>
 <span class="n">diff</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="n">dengan</span> <span class="n">x</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="n">adalah</span> <span class="o">=</span> <span class="mf">0.16849558398154249050</span>
-<span class="o">&gt;&gt;&gt;</span> 
 </code></pre></div>
                 
                   
@@ -586,6 +588,20 @@
             </div>
           </a>
         
+        
+          <a href="../Tugas5/" title="Eurel" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Eurel
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
