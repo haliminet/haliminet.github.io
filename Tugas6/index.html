@@ -13,7 +13,7 @@
         <meta name="description" content="Repository Untuk Tugas">
       
       
-        <link rel="canonical" href="https://halimifirdaus21.github.io/richardson/">
+        <link rel="canonical" href="https://halimifirdaus21.github.io/Tugas6/">
       
       
         <meta name="author" content="Ach Halimi Firdaus Z">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Ricardson - (180411100044) Ach. Halimi Firdaus Zuhron</title>
+        <title>Monte Carlo - (180411100044) Ach. Halimi Firdaus Zuhron</title>
       
     
     
@@ -118,7 +118,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#richardson-extrapolation" tabindex="0" class="md-skip">
+      <a href="#metode-integral-monte-carlo" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -144,7 +144,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Ricardson
+                Monte Carlo
               
             </span>
           
@@ -359,63 +359,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Ricardson
-      </label>
-    
-    <a href="./" title="Ricardson" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../richardson/" title="Ricardson" class="md-nav__link">
       Ricardson
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#teori" class="md-nav__link">
-    Teori
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contoh-program" class="md-nav__link">
-    Contoh Program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hasil-running" class="md-nav__link">
-    Hasil Running
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -435,11 +383,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Tugas6/" title="Monte Carlo" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Monte Carlo
+      </label>
+    
+    <a href="./" title="Monte Carlo" class="md-nav__link md-nav__link--active">
       Monte Carlo
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contoh-soal" class="md-nav__link">
+    Contoh Soal
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -469,22 +455,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#teori" class="md-nav__link">
-    Teori
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contoh-program" class="md-nav__link">
-    Contoh Program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hasil-running" class="md-nav__link">
-    Hasil Running
+  <a href="#contoh-soal" class="md-nav__link">
+    Contoh Soal
   </a>
   
 </li>
@@ -505,66 +477,128 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/halimifirdaus21/edit/master/docs/richardson.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/halimifirdaus21/edit/master/docs/Tugas6.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="richardson-extrapolation"><strong>Richardson Extrapolation</strong><a class="headerlink" href="#richardson-extrapolation" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>Dalam analisis numerik, Richardson Extrapolation adalah metode percepatan urutan, yang digunakan untuk meningkatkan laju konvergensi suatu urutan. </p>
-<p>Richardson Extrapolation termasuk integrasi Romberg, yang menerapkan ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan persamaan diferensial biasa.</p>
-</blockquote>
-<h3 id="teori"><strong>Teori</strong><a class="headerlink" href="#teori" title="Permanent link">&para;</a></h3>
-<p>Dalam rumus :</p>
-<p><strong><em>( f (x + h) - f (x - h) ) / (2 h)</em></strong></p>
-<p>untuk nilai h yang sangat kecil, dua fungsi evaluasi <em>f (x + h)</em> dan <em>f (x - h)</em> akan menjadi kira-kira sama, dan oleh karena itu pembatalan subtraktif akan terjadi. Oleh karena itu, tidak disarankan untuk menggunakan nilai h yang semakin kecil.</p>
-<p>Kita dapat mencoba untuk memperkirakan nilai tepat <em>e</em> dengan perkiraan <em>a(h)</em>. Dalam hal ini, <em>e</em> adalah turunan dari <em>f (1) (x)</em> dan perkiraannya adalah <em>( h ) = (f (x + h) - f (x - h)) / (2 h)</em>. Misalkan sekarang bahwa kesalahan aproksimasi didefinisikan oleh serangkaian bentuk Taylor :</p>
-<p align = "center"><i>e = a(h) + K h<sup>n</sup> + o(h<sup>n</sup>)</i></p>
+                <h1 id="metode-integral-monte-carlo">Metode Integral Monte Carlo<a class="headerlink" href="#metode-integral-monte-carlo" title="Permanent link">&para;</a></h1>
+<p>​   Integral merupakan topik dalam kalkulus yang banyak diaplikasikan pada matematika </p>
+<p>maupun pada bidang-bidang lainnya terutama untuk pengembangan ilmu fisika maupun teknik. </p>
+<p>Perhitungan integral tentu fungsi kontinu pada selang tertutup termasuk dalam permasalahan </p>
+<p>deterministik. Model-model deterministik telah banyak dikembangkan untuk menyelesaikan </p>
+<p>permasalahan perhitungan integral tentu fungsi kontinu pada selang tertutup. Beberapa model </p>
+<p>tersebut antara lain adalah: Metode Romberg, Metode Trapesium, Metode Persegi Panjang dan </p>
+<p>metode – metode yang lain. Metode-metode tersebut termasuk dalam algoritma komputasional </p>
+<p>yang menggunakan proses deterministik karena menghasilkan keluaran yang pasti (bahkan </p>
+<p>bisa juga sama), setiap kali proses perhitungan dijalankan. Perhitungan integral yang termasuk </p>
+<p>permasalahan deterministik dapat juga diselesaikan dengan menggunakan pendekatan </p>
+<p>stokastik, salah satunya dengan menggunakan Metode Monte Carlo.  </p>
+<p>​   Metode Monte Carlo (atau Percobaan Monte Carlo) merupakan salah satu kelas dalam </p>
+<p>algoritma komputasional yang menggunakan pengambilan sampel secara random untuk </p>
+<p>menghasilkan penyelesaian permasalahan. Metode Monte Carlo termasuk dalam model </p>
+<p>stokastik karena dikerjakan dengan menggunakan bilangan-bilangan random dan statistik </p>
+<p>probabilitas untuk menyelesaikan permasalahan-permasalahan. Metode Monte Carlo dapat </p>
+<p>juga digunakan untuk menyelesaiakan permasalahan-permasalahan pada bidang ekonomi, </p>
+<p>fisika, matematika maupun bidang-bidang yang lain. </p>
+<p><img alt="" src="../monte.png" /></p>
+<p><img alt="" src="../monte_1.png" /></p>
+<p><img alt="" src="../monte_2.png" /></p>
+<h2 id="contoh-soal">Contoh Soal<a class="headerlink" href="#contoh-soal" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../soal_monte.png" /></p>
+<p>soal nomer 3 adalah membuat program yang mana adalah implementasi dari monte carlo. dibawah ini adalah code programnya.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<p>Apabila menggunakan <em>h / 2</em> :</p>
-<p align = "center"><i>e = a(h/2) + K (h/2)n + o((h/2)n)</i>
-<br><i>= a(h/2) + K/2n h<sup>n</sup> + o(h<sup>n</sup>)</i></p>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">2500</span>
 
-<p>Mengalikan kedua ekspresi ini dengan 2<em>n</em> dan mengurangi hasil persamaan pertama</p>
-<p align = "center"><i>2n<sup>e</sup> − e = 2na(h/2) − a(h) + K/2n h<sup>n</sup> − K h<sup>n</sup> + o(h<sup>n</sup>)</i></p>
 
-<p>Perhatikan bahwa istilah h<sup>n</sup> dibatalkan dan kita dibiarkan dengan</p>
-<p align = "center"><i>(2n − 1)e = 2na(h/2) − a(h) + o(h<sup>n</sup>)</i></p>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
 
-<p>Jika kita melihat seri Taylor lengkap untuk rumus perbedaan-terpusat yang terpusat, kita perhatikan bahwa istilah kesalahannya dalam bentuk Knh<sup>n</sup>. Dapat kita tulis dengan :</p>
-<p align = center><i>K1 = −1/6 f(3)(x)h<sup>2</sup>, etc.</i></p>
 
-<h3 id="contoh-program"><strong>Contoh Program</strong><a class="headerlink" href="#contoh-program" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="k">def</span> <span class="nf">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
-    <span class="n">Z</span><span class="o">=</span><span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">Z</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">Z</span>
+<span class="n">area</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">xrand</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">D</span><span class="p">(</span><span class="n">Func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">h</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xrand</span><span class="p">)):</span>
+        <span class="n">xrand</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">integral</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-<span class="k">def</span> <span class="nf">Richardson_dif</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
-    <span class="n">k</span><span class="o">=</span><span class="mi">9</span> 
-    <span class="n">L</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">I</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-        <span class="n">L</span><span class="p">[</span><span class="n">I</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="n">j</span><span class="p">):</span>
-            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="p">((</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">integral</span><span class="o">+=</span><span class="n">func</span><span class="p">(</span><span class="n">xrand</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f(x) = -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 dengan x = 0.5&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Diferensiasi Numerik= &#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah = </span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">jawab</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">integral</span>
+    <span class="n">area</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jawab</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nilai phi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">ec</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Area&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 
 
-<h3 id="hasil-running"><strong>Hasil Running</strong><a class="headerlink" href="#hasil-running" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="n">dengan</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">Hasil</span> <span class="n">Diferensiasi</span> <span class="n">Numerik</span><span class="o">=</span> <span class="o">-</span><span class="mf">0.91250000000000530687</span>
-<span class="n">diff</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="n">dengan</span> <span class="n">x</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="n">adalah</span> <span class="o">=</span> <span class="mf">0.16849558398154249050</span>
+<p>​   Pada tiga baris pertama berfungsi untuk menginport <em>library</em> pada python. variabel a adalah batas bawah integral sedangkan variabel b merupakan batas atas integral dan variabel N adalah jumlah angka random yang akan kita coba ke dalam fungsi.  <em>def func(x):..</em>. mengandung fungsi integral dalam soal. main program terdapat dalam baris <em>area=[]</em> hingga baris <em>area.append(jawab)</em>. perulangan program akan dilakukan sebanyak N dengan memilih angka acak antara angka 0-2 dengan menggunakan <em>for i in range(len(xrand[i])):...</em> . kemudian semua hasil dari nilai komulatif fungsi akan ditampung dalam variabel integral. nilai phi akan dibuktikan dengan rumus monte carlo yakni <em>(b-a)/N*integral</em>.  pada python untuk membuat diagram bisa menggunakan library matplotlib.pyplot. fungsi tersebud dijalankan menggunakan method pada code 4 baris terakhir dalam program. disini coba kita run program dan membuktikan berapa nilai <em>phi</em> sebenarnya.</p>
+<p><strong>Percobaan pertama.</strong></p>
+<p><img alt="" src="../pi1.png" /></p>
+<p>Nilai <em>phi</em> menunjukkan senilai (3.1614507791715107)</p>
+<p><strong>Percobaan kedua.</strong></p>
+<p><img alt="" src="../pi2.png" /></p>
+<p>nilai <em>phi</em> menunjukkan senilai (3.136555632439774)</p>
+<p><strong>Percobaan ketiga.</strong></p>
+<p><img alt="" src="../pi3.png" /></p>
+<p>Nilai <em>phi</em> menunjukkan senilai(3.1260746164911244)</p>
+<p>Kesimpulannya,setelah dilakukan 3 kali percobaan nilai <em>phi</em> mendekati 3.14.</p>
+<p>Soal nomer 4 membuat program untuk menyelesaikan integral lipat tiga. dibawah ini adalah code untuk programnya.</p>
+<div class="codehilite"><pre><span></span><code>from scipy import random
+import numpy as np
+
+a = -1
+b = 1
+N=100
+n=3
+xrand=np.zeros(N)
+yrand=np.zeros(N)
+zrand=np.zeros(N)
+integral=0.0
+for i in range(n+1):
+    for i in range(len(xrand)):
+        xrand[i]=random.uniform(a,b)
+
+    for i in range(len(yrand)):
+        yrand[i]=random.uniform(a,b)
+
+    for i in range(len(zrand)):
+        zrand[i]=random.uniform(a,b)
+
+    def func(x,y,z):
+        return (x**2)+(y**2)+(z**2)
+
+
+    for i in range(N):
+        integral+=func(xrand[i],yrand[i],zrand[i])
+
+jawab=(b-a)/float(N)*integral
+print(&quot;Hasil : &quot;,jawab)
 </code></pre></div>
+
+
+<p>​   Untuk programnya hampir sama dengan soal nomer 3 hanya saja ditambahkan variabel y dan z. Sehingga untuk mencari angka randomnya juga ditambahkan kedalam program. Dibawah ini terdapat 3 percobaan yang sudah saya lakukan.</p>
+<p><strong>Percobaan</strong></p>
+<p><img alt="" src="../pi4.png" /></p>
+<p>​   gambar diatas terdapat 5 kali percobaan menunjukkan nilai antara 7.4-8.4. mari kita bandingkan dengan analisis secara manual pada gambar dibawah ini.</p>
+<p><img alt="" src="../pi5.jpg" /></p>
+<p>​   Kesimpulan dari hasil analitis dan menggunakan program jawabannya hampir menekati. tergantung banyaknya angka yang diinputkan. semakin banyak jumlah N dalam monte carlo maka semakin sedikit estimasi erornya. Terima kasih.</p>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$'],['$','$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p>
                 
                   
                 
@@ -586,7 +620,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Tugas4/" title="Recursive Trapezoid" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Tugas5/" title="Eurel" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -595,25 +629,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Recursive Trapezoid
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../Tugas5/" title="Eurel" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 Eurel
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
